@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 1
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[submodule]
+	active = .
+[remote "origin"]
+	url = git@github.com:mhanberg/silicon.lua
+	fetch = +refs/heads/*:refs/remotes/origin/*
