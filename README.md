@@ -1,6 +1,11 @@
 # silicon.lua
 
-**silicon** is a lua plugin for neovim to generate beautiful images of code snippet using [silicon](https://github.com/aloxaf/silicon) 
+> **Note**
+> This repository was re-uploaded because https://github.com/0oAstro/silicon.lua began to 404 recently.
+>
+> For some reason git would not let me push the existing repository, so I backed up the .git directory and initialized a new repository.
+
+**silicon** is a lua plugin for neovim to generate beautiful images of code snippet using [silicon](https://github.com/aloxaf/silicon)
 
 <video src = "https://user-images.githubusercontent.com/79555780/198016165-7a47ac6c-e329-4025-8d66-f9b34bd52658.mp4"></video>
 
@@ -85,37 +90,37 @@ vim.keymap.set('n', '<Leader>s',  function() silicon.visualise_api({to_clip = tr
 
 ## Command line
 
-Calling `silicon.visualise_api` with `lua` in command line doesn't work due to `lua` not supporting ranges.  
-This means that the moment you hit enter, you leave visual mode before lua function is called. While this populates two registers, using them doesn't work with "v" mode maps.  
+Calling `silicon.visualise_api` with `lua` in command line doesn't work due to `lua` not supporting ranges.
+This means that the moment you hit enter, you leave visual mode before lua function is called. While this populates two registers, using them doesn't work with "v" mode maps.
 A workaround has been implemented, and a shorthand that forces it is available as `.visualise_cmdline`:
 
 - Generate image of lines in a visual selection
 
-    ```lua
-    lua require('silicon').visualise_cmdline()
-    ```
+  ```lua
+  lua require('silicon').visualise_cmdline()
+  ```
 
 - Generate image of a whole buffer, with lines in a visual selection highlighted
 
-    ```lua
-    lua require('silicon').visualise_cmdline({to_clip = true, show_buf = true})
-    ```
+  ```lua
+  lua require('silicon').visualise_cmdline({to_clip = true, show_buf = true})
+  ```
 
 - Generate visible portion of a buffer
 
-    ```lua
-    lua require('silicon').visualise_cmdline({to_clip = true, visible = true})
-    ```
+  ```lua
+  lua require('silicon').visualise_cmdline({to_clip = true, visible = true})
+  ```
 
 ## Notes
 
 - The default path of image is the current working directory of the editor, but you can change it by
 
-    ```lua
-    require("silicon").setup({
-            output = "/home/astro/Pictures/SILICON_$year-$month-$date-$time.png"),
-    })
-    ```
+  ```lua
+  require("silicon").setup({
+          output = "/home/astro/Pictures/SILICON_$year-$month-$date-$time.png"),
+  })
+  ```
 
 ## Colorscheme reloading
 
