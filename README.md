@@ -1,6 +1,13 @@
 # silicon.lua
 
 > **Note**
+> The author's account has be brought back online, please go use that repository.
+>
+> https://github.com/0oAstro/silicon.lua
+
+> **Note**
+> Outdated Notice:
+> 
 > This repository was re-uploaded because https://github.com/0oAstro/silicon.lua began to 404 recently.
 >
 > For some reason git would not let me push the existing repository, so I backed up the .git directory and initialized a new repository.
